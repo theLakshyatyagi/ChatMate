@@ -1,21 +1,44 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ChatGPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box">
-            <div class="message bot">Hello! How can I assist you today?</div>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <header class="w-full flex justify-between items-center p-4" role="navigation">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-paperclip text-xl"></i>
+            <span class="text-xl font-semibold">ChatGPT</span>
         </div>
-        <div class="input-container">
-            <input type="text" id="user-input" placeholder="Send a message...">
-            <button onclick="sendMessage()">&#9658;</button>
+        <div class="space-x-4">
+            <button class="bg-white text-gray-900 px-4 py-2 rounded-full" aria-label="Log in">Log in</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full" aria-label="Sign up">Sign up</button>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </header>
+    <main class="flex flex-col items-center justify-center flex-grow">
+        <h1 class="text-3xl font-semibold mb-8">What can I help with?</h1>
+        <div class="relative w-full max-w-2xl">
+            <input type="text" name="query" placeholder="Ask anything" class="w-full p-4 pl-12 pr-32 bg-gray-800 rounded-full text-white focus:outline-none">
+            <div class="absolute left-4 top-1/2 transform -translate-y-1/2 flex space-x-2">
+                <button class="bg-gray-700 text-white px-4 py-2 rounded-full" aria-label="Attach">+ Attach</button>
+                <button class="bg-gray-700 text-white px-4 py-2 rounded-full" aria-label="Search"><i class="fas fa-globe"></i> Search</button>
+                <button class="bg-gray-700 text-white px-4 py-2 rounded-full" aria-label="Reason">Reason</button>
+            </div>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-gray-900 px-4 py-2 rounded-full" aria-label="Voice">Voice</button>
+        </div>
+        <div class="flex flex-wrap justify-center mt-8 space-x-2 space-y-2">
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">Summarize text</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">Get advice</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">Analyze data</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">Code</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">Surprise me</button>
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full">More</button>
+        </div>
+    </main>
+    <footer class="w-full text-center p-4 text-gray-500 text-sm">
+        By messaging ChatGPT, you agree to our <a href="#" class="underline">Terms</a> and have read our <a href="#" class="underline">Privacy Policy</a>.
+    </footer>
 </body>
 </html>
